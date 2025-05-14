@@ -14,6 +14,6 @@ public class SuccessfulLoginTest extends BaseTest {
         InventoryPage inventoryPage =
                 loginPage.login("standard_user", "secret_sauce");
 
-        Assert.assertTrue(inventoryPage.isInventoryLoaded(), "Inventory page did not load as expected");
+        Assert.assertTrue(inventoryPage.isAt(), "Inventory page did not load as expected");
     }
 }

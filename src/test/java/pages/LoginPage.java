@@ -6,13 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-    private WebDriver driver;
+public class LoginPage extends BasePage{
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(id = "user-name")
     private WebElement userNameInput;
@@ -22,6 +17,11 @@ public class LoginPage {
 
     @FindBy(id = "login-button")
     private WebElement loginButton;
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+    }
 
     public InventoryPage login(String username, String password) {
         userNameInput.click();
@@ -35,5 +35,10 @@ public class LoginPage {
         loginButton.click();
 
         return new InventoryPage(driver);
+    }
+
+    @Override
+    public boolean isAt() {
+        return loginButton.isDisplayed();
     }
 }
