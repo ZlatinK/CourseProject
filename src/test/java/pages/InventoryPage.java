@@ -12,14 +12,14 @@ public class InventoryPage extends BasePage {
     @FindBy(className = "title")
     private WebElement inventoryTitle;
 
-//    @FindBy(id = "react-burger-menu-btn")
-//    private WebElement menuButton;
-//
-//    @FindBy(id = "logout_sidebar_link")
-//    private WebElement logoutLink;
-//
-//    @FindBy(className = "shopping_cart_badge")
-//    private WebElement cartCounter;
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement menuButton;
+
+    @FindBy(id = "logout_sidebar_link")
+    private WebElement logoutLink;
+
+    @FindBy(className = "shopping_cart_badge")
+    private WebElement cartCounter;
 
     public InventoryPage(WebDriver driver) {
         super(driver);
