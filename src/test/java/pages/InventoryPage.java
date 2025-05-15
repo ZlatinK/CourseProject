@@ -44,13 +44,13 @@ public class InventoryPage extends BasePage {
         return new CartPage(driver);
     }
 
-//    public String getCartItemCount() {
-//        return cartCounter.getText();
-//    }
+    public String getCartItemCount() {
+        return cartCounter.getText();
+    }
 
-//    public LoginPage logoutFromInventory() {
-//        menuButton.click();
-//        logoutLink.click();
-//        return new LoginPage(driver);
-//    }
+    public LoginPage logoutFromInventory() {
+        menuButton.click();
+        logoutLink.click();
+        return new LoginPage(driver);
+    }
 }

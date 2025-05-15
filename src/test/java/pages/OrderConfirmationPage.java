@@ -10,15 +10,24 @@ public class OrderConfirmationPage extends BasePage {
     @FindBy(className = "complete-header")
     private WebElement thankYouMessage;
 
-//    @FindBy(className = "complete-text")
-//    private WebElement orderCompleteText;
-//
-//    @FindBy(id = "back-to-products")
-//    private WebElement backHomeButton;
+    @FindBy(className = "complete-text")
+    private WebElement orderCompleteText;
+
+    @FindBy(id = "back-to-products")
+    private WebElement backHomeButton;
 
     public OrderConfirmationPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
+    }
+
+    public String getOrderCompleteText() {
+        return orderCompleteText.getText();
+    }
+
+    public InventoryPage clickBackHome() {
+        backHomeButton.click();
+        return new InventoryPage(driver);
     }
 
     public boolean isAt() {

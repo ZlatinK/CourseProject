@@ -18,9 +18,9 @@ public class ReviewPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-//    public String getTotalPriceText() {
-//        return orderTotal.getText();
-//    }
+    public String getTotalPriceText() {
+        return orderTotal.getText();
+    }
 
     public OrderConfirmationPage clickFinish() {
         finishButton.click();
